@@ -1,8 +1,8 @@
-import Character from './basic';
+import Character from "./basic";
 
 export default class Daemon extends Character {
-  constructor(name) {
-    super(name);
+  constructor(name, type = "Daemon") {
+    super(name, type);
     this.attack = 10;
     this.deffence = 40;
   }

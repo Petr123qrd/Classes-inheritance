@@ -1,26 +1,30 @@
 export default class Character {
   constructor(name) {
-    this.setName(name);
-    this.type = this.constructor.name;
+    this.name = name;
+    this.type = type;
     this.health = 100;
     this.level = 1;
-    this.attack = 0;
-    this.deffence = 0;
-  }
+    this.attack = undefined;
+    this.deffence = undefined;
+    const typeCharacter = [
+      "Bowman",
+      "Daemon",
+      "Magician",
+      "Swordsman",
+      "Undead",
+      "Zombie",
+    ];
 
-  setName(name) {
-    if (!name) {
-      throw new Error('Ошибка: Параметр name не задан!');
+    if (typeof name !== "string") {
+      throw new Error("Ошибка! Имя должно быть строкой!");
     }
 
-    const trimedName = name.trim();
-
-    if (trimedName.length === 1 || trimedName.length > 10) {
-      throw new Error(
-        'Ошибка: Параметр name должен содержать от 2 до 10 символов!',
-      );
+    if (name.length < 2 || name.length > 10) {
+      throw new Error("Ошибка! Количество символов в имени от 2 до 10!");
     }
 
-    this.name = trimedName;
+    if (!typeCharacter.includes(type)) {
+      throw new Error("Ошибка! Такой персонаж не существует!");
+    }
   }
 }

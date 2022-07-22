@@ -1,8 +1,8 @@
-import Character from './basic';
+import Character from "./basic";
 
 export default class Swordsman extends Character {
-  constructor(name) {
-    super(name);
+  constructor(name, type = "Swordsman") {
+    super(name, type);
     this.attack = 40;
     this.deffence = 10;
   }
