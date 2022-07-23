@@ -20,7 +20,9 @@ export default class Character {
     }
 
     if (name.length < 2 || name.length > 10) {
-      throw new Error("Ошибка! Количество символов в имени от 2 до 10!");
+      throw new Error(
+        "Ошибка: Параметр name должен содержать от 2 до 10 символов!"
+      );
     }
 
     if (!typeCharacter.includes(type)) {
