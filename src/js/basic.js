@@ -6,8 +6,9 @@ export default class Character {
     this.level = 1;
     this.attack = undefined;
     this.deffence = undefined;
+
     const typeCharacter = [
-      "Bowman",
+      "Bowerman",
       "Daemon",
       "Magician",
       "Swordsman",

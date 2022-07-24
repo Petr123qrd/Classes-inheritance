@@ -28,17 +28,99 @@ test("Имя не является строкой", () => {
   }).toThrow();
 });
 
-describe.each([
-  ["Bowerman", Bowerman, 25, 25],
-  ["Swordsman", Swordsman, 40, 10],
-  ["Magician", Magician, 10, 40],
-  ["Undead", Undead, 25, 25],
-  ["Zombie", Zombie, 40, 10],
-  ["Daemon", Daemon, 10, 40],
-]);
 test("Заданный персонаж не существует", () => {
   expect(() => {
     const result = new Character("xxx", "Fairy");
     return result;
+  }).toThrow();
+});
+
+test("creation Bowerman", () => {
+  expect(() => {
+    const recieved = new Bowerman("Bowerman");
+    const result = {
+      name: "bowerman",
+      type: "Bowerman",
+      health: 100,
+      level: 1,
+      attack: 25,
+      defense: 25,
+    };
+    return recieved, result;
+  }).toThrow();
+});
+
+test("creation Swordsman", () => {
+  expect(() => {
+    const recieved = new Swordsman("Swordsman");
+    const result = {
+      name: "Swordsman",
+      type: "Swordsman",
+      health: 100,
+      level: 1,
+      attack: 25,
+      defense: 25,
+    };
+    return recieved, result;
+  }).toThrow();
+});
+
+test("creation Magician", () => {
+  expect(() => {
+    const recieved = new Magician("Magician");
+    const result = {
+      name: "Magician",
+      type: "Magician",
+      health: 100,
+      level: 1,
+      attack: 25,
+      defense: 25,
+    };
+    return recieved, result;
+  }).toThrow();
+});
+
+test("creation Undead", () => {
+  expect(() => {
+    const recieved = new Undead("Undead");
+    const result = {
+      name: "Undead",
+      type: "Undead",
+      health: 100,
+      level: 1,
+      attack: 25,
+      defense: 25,
+    };
+    return recieved, result;
+  }).toThrow();
+});
+
+test("creation Zombie", () => {
+  expect(() => {
+    const recieved = new Zombie("Zombie");
+    const result = {
+      name: "Zombie",
+      type: "Zombie",
+      health: 100,
+      level: 1,
+      attack: 25,
+      defense: 25,
+    };
+    return recieved, result;
+  }).toThrow();
+});
+
+test("creation Daemon", () => {
+  expect(() => {
+    const recieved = new Daemon("Daemon");
+    const result = {
+      name: "Daemon",
+      type: "Daemon",
+      health: 100,
+      level: 1,
+      attack: 25,
+      defense: 25,
+    };
+    return recieved, result;
   }).toThrow();
 });
