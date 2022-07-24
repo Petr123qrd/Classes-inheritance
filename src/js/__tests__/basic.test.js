@@ -36,91 +36,73 @@ test("Заданный персонаж не существует", () => {
 });
 
 test("creation Bowerman", () => {
-  expect(() => {
-    const recieved = new Bowerman("Bowerman");
-    const result = {
-      name: "bowerman",
-      type: "Bowerman",
-      health: 100,
-      level: 1,
-      attack: 25,
-      defense: 25,
-    };
-    return recieved, result;
-  }).toThrow();
-});
-
-test("creation Swordsman", () => {
-  expect(() => {
-    const recieved = new Swordsman("Swordsman");
-    const result = {
-      name: "Swordsman",
-      type: "Swordsman",
-      health: 100,
-      level: 1,
-      attack: 25,
-      defense: 25,
-    };
-    return recieved, result;
-  }).toThrow();
-});
-
-test("creation Magician", () => {
-  expect(() => {
-    const recieved = new Magician("Magician");
-    const result = {
-      name: "Magician",
-      type: "Magician",
-      health: 100,
-      level: 1,
-      attack: 25,
-      defense: 25,
-    };
-    return recieved, result;
-  }).toThrow();
-});
-
-test("creation Undead", () => {
-  expect(() => {
-    const recieved = new Undead("Undead");
-    const result = {
-      name: "Undead",
-      type: "Undead",
-      health: 100,
-      level: 1,
-      attack: 25,
-      defense: 25,
-    };
-    return recieved, result;
-  }).toThrow();
-});
-
-test("creation Zombie", () => {
-  expect(() => {
-    const recieved = new Zombie("Zombie");
-    const result = {
-      name: "Zombie",
-      type: "Zombie",
-      health: 100,
-      level: 1,
-      attack: 25,
-      defense: 25,
-    };
-    return recieved, result;
-  }).toThrow();
+  const recieved = new Bowerman("Bowerman", "Bowerman");
+  expect(recieved).toEqual({
+    name: "Bowerman",
+    type: "Bowerman",
+    health: 100,
+    level: 1,
+    attack: 25,
+    deffence: 25,
+  });
 });
 
 test("creation Daemon", () => {
-  expect(() => {
-    const recieved = new Daemon("Daemon");
-    const result = {
-      name: "Daemon",
-      type: "Daemon",
-      health: 100,
-      level: 1,
-      attack: 25,
-      defense: 25,
-    };
-    return recieved, result;
-  }).toThrow();
+  const recieved = new Daemon("Daemon", "Daemon");
+  expect(recieved).toEqual({
+    name: "Daemon",
+    type: "Daemon",
+    health: 100,
+    level: 1,
+    attack: 10,
+    deffence: 40,
+  });
+});
+
+test("creation Magician", () => {
+  const recieved = new Magician("Magician", "Magician");
+  expect(recieved).toEqual({
+    name: "Magician",
+    type: "Magician",
+    health: 100,
+    level: 1,
+    attack: 10,
+    deffence: 40,
+  });
+});
+
+test("creation Swordsman", () => {
+  const recieved = new Swordsman("Swordsman", "Swordsman");
+  expect(recieved).toEqual({
+    name: "Swordsman",
+    type: "Swordsman",
+    health: 100,
+    level: 1,
+    attack: 40,
+    deffence: 10,
+  });
+});
+
+test("creation Undead", () => {
+  const recieved = new Undead("Undead", "Undead");
+  expect(recieved).toEqual({
+    name: "Undead",
+    type: "Undead",
+    health: 100,
+    level: 1,
+    attack: 25,
+    deffence: 25,
+  });
+});
+
+test("creation Zombie", () => {
+  const recieved = new Zombie("Zombie", "Zombie");
+  expect(recieved).toEqual({
+    name: "Zombie",
+    type: "Zombie",
+    health: 100,
+    level: 1,
+    attack: 40,
+    deffence: 10,
+  });
 });
