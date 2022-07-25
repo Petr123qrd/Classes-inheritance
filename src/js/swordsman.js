@@ -1,7 +1,9 @@
 import Character from "./basic";
 
-export default function Swordsman(name, type) {
-  Character.call(this, name, type);
-  this.attack = 40;
-  this.deffence = 10;
+export default class Swordsman extends Character {
+  constructor(name, type = "Swordsman") {
+    super(name, type);
+    this.attack = 40;
+    this.deffence = 10;
+  }
 }
